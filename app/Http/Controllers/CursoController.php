@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Models\Models\ModelCursos;
-use App\Models\Models\ModelInscricao;
+
 
 class CursoController extends Controller
 {
-
     private $objCurso;
-    private $objInscricao;
-
+ 
     public function __construct(){
         $this->objCurso = new ModelCursos();
-        $this->objInscricao = new ModelInscricao();
     }
-
     /**
      * Display a listing of the resource.
      *
@@ -25,8 +20,8 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $insc = $this->objInscricao->all();
-        return view('index', compact('insc'));
+        $curso = $this->objCurso->all();
+        return view('curso', compact('curso'));
     }
 
     /**
@@ -36,7 +31,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        return view('inscricao');
+        //
     }
 
     /**

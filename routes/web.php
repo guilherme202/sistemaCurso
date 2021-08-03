@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InscricaoController;
 use App\Http\Controllers\CursoController;
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +14,5 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::resource('/', CursoController::class);
+Route::resource('/inscricao', InscricaoController::class);
+Route::resource('/curso', CursoController::class);

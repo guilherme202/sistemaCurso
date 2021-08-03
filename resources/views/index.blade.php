@@ -5,6 +5,7 @@
 <h4>Listar/editar inscrições</h4>
 
 <div class="col-12 m-auto"><table class="table">
+  @csrf
   <thead>
     <tr>
       <th scope="col">Inscrito</th>
@@ -22,7 +23,7 @@
         @php
             $curso = $inscs->find($inscs->id)->relCursos;
         @endphp
-          <tr>
+     <tr>
       <td>{{$inscs->nomeAluno}}</td>
       <td>{{$inscs->created_at}}</td>
       <td>{{$inscs->tipo}}</td>
@@ -31,10 +32,8 @@
       <td>{{$inscs->email}}</td>
       <td>{{$inscs->endereco}}</td>
 
-      <td><a href=""><button class="btn btn-dark">Editar</button></a>
-      <a href=""> <button class="btn btn-danger">Excluir</button></a></td>
-     
-      
+      <td><a href="{{url("inscricao/$inscs->id/edit")}}"><button class="btn btn-dark">Editar</button></a>
+      <a href="{{url("inscricao/$inscs->id")}}" class="js-del"> <button class="btn btn-danger">Excluir</button></a></td>
     </tr>
       @endforeach
    </tbody>

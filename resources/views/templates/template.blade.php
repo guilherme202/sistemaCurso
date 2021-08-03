@@ -15,10 +15,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="{{url('/create')}}">Inscrições</a>
-        <a class="nav-link" href="#">Listar/editar inscrições</a>
+        <a class="nav-link" href="{{url('/inscricao/create')}}">Inscrições</a>
+        <a class="nav-link" href="{{url('/inscricao')}}">Listar/editar inscrições</a>
         <a class="nav-link" href="#">Novo curso</a>
-        <a class="nav-link" href="#">Lista de cursos</a>
+        <a class="nav-link" href="{{url('/curso')}}">Lista de cursos</a>
         <a class="nav-link" href="#">Cadastro de Usúarios</a>
      
       </div>
@@ -28,5 +28,7 @@
 </head>
 <body>
     @yield('content')
+    <script src="{{url("assets/js/javascript.js")}}"></script>
 </body>
+
 </html>
