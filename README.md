@@ -1,7 +1,7 @@
-Sistema de inscrição para cursos :man_student:
+Sistema de inscrição para cursos :man_student: <br />
 
-Páginas:
-host/inscricao - Ver inscrições.
-host/inscricao/create - Cadastrar inscrições.
-host/curso - Ver cursos.
-host/curso/create - Cadastrar cursos.
+Páginas:<br />
+host/inscricao - Ver inscrições.<br />
+host/inscricao/create - Cadastrar inscrições.<br />
+host/curso - Ver cursos.<br />
+host/curso/create - Cadastrar cursos.<br />
