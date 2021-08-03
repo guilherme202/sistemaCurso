@@ -13,7 +13,7 @@
            ajax.setRequestHeader('X-CSRF-TOKEN',token);
            ajax.onreadystatechange=function(){
                if(ajax.readyState === 4 && ajax.status === 200){
-                   win.location.href="inscricao";
+                   win.location.href=window.location.href;
                }
            };
            ajax.send();

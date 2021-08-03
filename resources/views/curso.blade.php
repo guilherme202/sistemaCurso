@@ -14,6 +14,7 @@
       <th scope="col">Data de Início</th>
       <th scope="col">Data de Término</th>
       <th scope="col">Quantidade de Inscritos</th>
+      <th scope="col">Ações</th>
       </tr>
   </thead>
   <tbody>
@@ -25,6 +26,8 @@
       <td>{{$cursos->dataInicio}}</td>
       <td>{{$cursos->dataFim}}</td>
       <td>{{$cursos->qtdInscritos}}</td>
+      <td><a href="{{url("curso/$cursos->id/edit")}}"><button class="btn btn-dark">Editar</button></a>
+      <a href="{{url("curso/$cursos->id")}}" class="js-del"> <button class="btn btn-danger">Excluir</button></a></td>
     </tr>
     @endforeach
       </tbody>

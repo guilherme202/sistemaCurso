@@ -17,9 +17,9 @@
       <div class="navbar-nav">
         <a class="nav-link" href="{{url('/inscricao/create')}}">Inscrições</a>
         <a class="nav-link" href="{{url('/inscricao')}}">Listar/editar inscrições</a>
-        <a class="nav-link" href="#">Novo curso</a>
+        <a class="nav-link" href="{{url('/curso/create')}}">Novo curso</a>
         <a class="nav-link" href="{{url('/curso')}}">Lista de cursos</a>
-        <a class="nav-link" href="#">Cadastro de Usúarios</a>
+       
      
       </div>
     </div>

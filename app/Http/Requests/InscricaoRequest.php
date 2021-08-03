@@ -44,6 +44,8 @@ class InscricaoRequest extends FormRequest
             'email.required'  => 'Coloque um email válido.',
             'email.email'  => 'Coloque um email válido.',
             'cpf.numeric'  => 'Coloque apenas números.',
+            'endereco.required' => 'Coloque um endereço.',
+            'empresa.required' => 'Coloque uma empresa.',
                    
         ];
     }

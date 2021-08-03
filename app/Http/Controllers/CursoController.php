@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CursoRequest;
 use App\Models\Models\ModelCursos;
 
 
@@ -31,7 +31,8 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('insereCurso');
     }
 
     /**
@@ -40,9 +41,21 @@ class CursoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CursoRequest $request)
     {
-        //
+        $cad=$this->objCurso->create([
+            'nome'=>$request->nome,
+            'descricao'=>$request->descricao,
+            'valor'=>$request->valor,
+            'dataInicio'=>$request->dataInicio,
+            'dataFim'=>$request->dataFim,
+            'qtdInscritos'=>$request->qtdInscritos,
+            'material'=>$request->material,
+        
+         ]);
+         if($cad){
+             return redirect('/curso');
+         }
     }
 
     /**
@@ -64,7 +77,8 @@ class CursoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $curso=$this->objCurso->find($id);
+        return view('insereCurso',compact('curso'));
     }
 
     /**
@@ -74,9 +88,18 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CursoRequest $request, $id)
     {
-        //
+        $this->objCurso->where(['id'=>$id])->update([
+            'nome'=>$request->nome,
+            'descricao'=>$request->descricao,
+            'valor'=>$request->valor,
+            'dataInicio'=>$request->dataInicio,
+            'dataFim'=>$request->dataFim,
+            'qtdInscritos'=>$request->qtdInscritos,
+            'material'=>$request->material,
+        ]);
+        return redirect('curso');
     }
 
     /**
@@ -87,6 +110,7 @@ class CursoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del=$this->objCurso->destroy($id);
+        return($del)?"sim":"não";
     }
 }

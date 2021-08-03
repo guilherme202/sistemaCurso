@@ -84,9 +84,9 @@ class InscricaoController extends Controller
      */
     public function edit($id)
     {
-        $insc=$this->objInscricao->find($id);
-        $cursos=$this->objCurso->all();
-        return view('inscricao',compact('insc','cursos'));
+        $curso=$this->objInscricao->find($id);
+       
+        return view('insereCurso',compact('curso'));
     }
 
     /**
