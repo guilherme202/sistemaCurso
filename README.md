@@ -1,4 +1,4 @@
-Sistema de inscrição para cursos :man_student: <br />
+Sistema simples de inscrição para cursos em uma escola/faculdade :man_student: <br />
 
 Páginas:<br />
 host/inscricao - Ver inscrições.<br />
